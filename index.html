@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPMC</title>
+    <style>
+        .box{
+            width: 1295px;
+            height: 620px;
+            padding: 20px;
+            display: inline-block;
+            border: 3px solid red;
+            background-image: url('images/eceimg.jpg');
+        }
+        @keyframes gradient {
+            0% {
+              background-position: 100% 50%;
+          }
+          50% {
+              background-position: 100% 50%;
+          }
+          100% {
+              background-position: 100% 50%;
+          }
+        }
+        
+        .box1{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display: run-in;
+            border: 3px solid red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }       
+        .box2{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display: run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }        
+        .box3{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display:run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }
+        .con li{
+            text-align: center;
+            font-size: 200%;
+            font-weight: bold;
+        }
+        .box4{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display:run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }  
+        .box4 h1{
+            text-align: center;
+            font-size: 300%;
+            text-decoration: underline;
+            font-style: oblique;
+        }
+        .box5{
+            width: 1295px;
+            height: 1300px;
+            padding: 20px;
+            display:run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }  
+        .box6{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display:run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }
+        .box7{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display:run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }
+        .box8{
+            width: 1295px;
+            height: 900px;
+            padding: 20px;
+            display:run-in;
+            border: 3px solid red;
+            background-color: red;
+            background: linear-gradient(-45deg, goldenrod, rgb(207, 36, 36), #aa1717da, #ec4242, rgb(248, 252, 47));
+            animation: gradient 15s ease infinite;
+        }
+        .box:hover,.box1:hover,.box2:hover,.box3:hover,.box4:hover,.box5:hover,.box6:hover,.box7:hover,.box8:hover{
+            box-shadow: 0px 12px 32px 18px black;
+        } 
+        footer{
+            width: 1300px;
+            height: 300px;
+            display: inline-flexbox;
+            background-color: transparent;
+            margin: 5px grey;
+            padding: 30px;
+        }     
+        .tit{
+            text-align:center;
+            color: rgb(255, 255, 255);
+            font-size:200%;
+            margin-top: 30%;
+        }
+        .tit2 h1{
+            text-align:center;
+            color: rgb(255, 255, 255);
+            font-size:400%;
+            text-decoration: underline;
+            font-style: oblique;
+        }
+        .tit2 h2{
+            text-align: center;
+            font-size: 200%;
+            font-weight: bolder;
+        }
+        .titl h2{
+            text-align: center;
+            font-size: 250%;
+            font-weight: bolder;
+            margin-top: 15%;
+            word-wrap: break-word;
+            font-style: italic;
+        }
+        .tit3 h1{
+            font-size: 350%;
+            color: burlywood;
+            text-align: center;
+            text-decoration: underline;
+            font-style: oblique;
+        }
+        .tit3 h2{
+            font-size: 250%;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        .tab{
+            margin-top: 5%;
+            word-wrap: break-word;
+            display: flex;
+            margin: 3px green;
+            padding: 5px;
+            justify-content: center;
+        }
+        .tab1{
+            margin-top: 5%;
+            word-wrap: break-word;
+            display: flex;
+            margin: 3px green;
+            padding: 5px;
+            justify-content: center;
+        }
+        .tab2{
+            word-wrap: break-word;
+            display: flex;
+            margin: 3px green;
+            text-overflow: ellipsis;
+            justify-content: center;
+        }
+        .name h2{
+            text-decoration:wavy ;
+            font-style: oblique;
+        }
+        .tab2 .con1{
+            width: 100%;
+            padding: 0%;
+        }
+        .tit4 li{
+            font-weight: bold;
+            font-size: 200%;
+        }
+        .tab img{
+            width: 400px;
+        }
+        .tab1 img{
+            width: 400px;
+        }
+        .tab2 img{
+            max-width: 20%;
+        }
+        .box4 .cap img{
+            display: flex;
+            justify-content: center;
+        }
+        .cap img{
+            width: 80%;
+            block-size: 100%;
+            padding-left: 10%;
+            padding-right: 20%;
+        }
+        .cap h2{
+            margin-top: 8%;
+            text-align: center;
+            font-size: 190%;
+            font-weight: bold;
+            font-style: oblique;
+            color: burlywood;
+
+        }
+        .con1 h2{
+            font-size: 230%;
+            text-align: center;
+            font-weight: bold;
+        }
+        .con1 h1{
+            font-size: 400%;
+            text-align: center;
+            font-weight: bold;
+            color: coral;
+            text-decoration: underline;
+            font-style: oblique;
+        }
+        .con1 h2:hover{
+            color: rgb(197, 227, 233);
+        }
+        .tit:hover{
+            word-spacing: 15%;
+            text-shadow: 5px 3px 3px black;
+            color: gold;
+        }
+        footer{
+            background-image: url('images/dinning.jpg');
+            font-size: 250%;
+            text-align: center;
+            color: aliceblue;
+        }
+        footer h1{
+            margin: 6%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="tit">
+            <h1>MicroProcessor And <br> Microcontroller</h1>
+        </div>
+    </div>
+    <div class="box1">
+        <div class="tit2">
+            <h1>Sensor Interface(With Microcontrollers)</h1>
+            <div class="name">
+                <h2>Presenting by ; <br> MalaiRaja and DhanushBharathi</h2>
+            </div>
+            <h2>Computer Science And Engineering (dept.).</h2>
+            <div class="titl">
+               <h2> Objective : To know about the sensor interfacing with microcontroller.</h2>
+
+            </div>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="tit3">
+            <h1>Sensor</h1>
+            <h2>A sensor is a device that detects and responds to some type of input from the physical environment. The input can be light, heat, motion, moisture, pressure or any number of other environmental phenomena.</h2>
+            <br>
+            <br>
+            <h1>Interface</h1>
+            <h2>The place at which independent and often unrelated systems meet and act on or communicate with each other</h2>
+            <h2>Eg: The Man-Machine Interface</h2>
+        </div>
+        
+    </div>
+    <div class="box3">
+        <div class="con">
+        <ul>
+            <li>An interface is the circuitry that connects an embedded controller to the outside world. </li> <li> Initially, all I/O in early micros was just the parallel data and address buses extended to accommodate additional I/O circuitry.</li> <li> Today, much of the I/O interface circuits are put right on the same chip with the rest of the micro.</li>
+        </ul>
+        </div>
+        <div class="tab">
+            <div class="tit4">
+                <ul>
+                <li>Many interface methods have been developed over the years to solve the complex problem of balancing 
+                    circuit design criteria such as features, cost, size, weight, power consumption, reliability, availability, 
+                    manufacturability. </li> <br> <br>
+                <li>Many microcontroller designs typically mix multiple interfacing methods. In a very simplistic form, a microController system can be viewed as a system that reads from (monitors) inputs, performs processing and 
+                    writes to ( controls ) outputs.</li>
+                </ul>
+            </div>
+            <img src="images/mc.jpg" alt="capture">
+        </div>
+
+    </div>
+    <div class="box4">
+        <h1>Types Of Interfaces in Microcontrollers</h1>
+        <div class="tab">
+            <div class="cap">
+                <img src="images/Capture1.jpg" alt="Types">
+                <h2>
+                    <ul>
+                        <li>Analog</li>
+                        <br>
+                        <li>Digital</li>
+                    </ul>
+
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="box5">
+        <div class="con1">
+            <h2> Following are the most widely used interfaces you are likely to encounter.</h2>
+            <h1>RS-232/UART</h1>
+        </div>
+        <div class="tab2">
+        <div class="con1">
+            <h2>
+                <ul>
+                    <li>This universal asynchronous receiver-transmitter is actually the physical circuitry implementing a popular serial interface standard referred to as RS-232. </li> <li> It was originally developed for connecting computers to teletype machines and early video terminals.</li>
+                    <br>
+                    <li>The RS-232 interface sends and receives data in bytes (8 bits) plus two extra bits, called Start and Stop bits, that tell the receiving device when the data begins and ends . </li> <li> The logic levels are −3 to −25 V for a binary 1 and +3 to +25 V </li> <li> for a binary 0. Typical voltage levels are in the 5- to 12-V range. </li> <li> The data rate is slow, typically from 300 bps to 115.2 kbps. </li> <li> Standard data rates are used, so no clock signal is needed.</li>
+                </ul>
+            </h2>
+        </div>
+        <img src="images/uart.jpg" alt="UART">
+    </div>
+    </div>
+    <div class="box6">
+        <div class="con1">
+            <h1>SPI</h1>
+        </div>
+            <div class="tab1">
+                <div class="con1">
+                    <h2>
+                    <ul>
+                        <li>This is the serial peripheral interface.</li> <li> It uses four wires, data in, data out, clock, and a select signal that determines whether a device is a master or slave and either sending or receiving data. <li> A fifth connection is ground.  It is much faster than the I2C interface, with speeds up to 20 Mbps.</li>
+                    </ul>
+                </h2>
+                </div>
+                <img src="images/spi.jpg" alt="SPI">
+            </div>
+
+        
+    </div>
+    <div class="box7">
+        <div class="con1">
+            <h1>CAN</h1>
+        </div>
+        <div class="tab1">
+            <div class="con1">
+                <h2>
+                    <ul>
+                        <li>This is Controller Area Network serial bus in an interface used to link micros together in small networks.</li>  <li> It is used in automotive and industrial applications. </li> <li> The usual cable is twisted pair and a ground. Speeds range from 10 kbps to 1 Mbps with 20 kbps being typical. </li> <li> The data is sent in specifically formatted frames as determined by a standard protocol. </li> <li> It uses start and stop bits like the RS-232 and some similar control codes defined in ASCII.</li> <li> It also includes error detection and correction capability, so it is very reliable.</li>
+                    </ul>
+                </h2>
+            </div>
+            <img src="images/can1.jpg" alt="CAN">
+        </div>
+    </div>
+    <div class="box8">
+        <div class="con1">
+            <h1>USB</h1>
+        </div>
+        <div class="tab1">
+            <div class="con1">
+                <h2>
+                    <ul>
+                        <li>The Universal Serial Bus is the most common PC interface for peripherals including keyboard, mouse, printer, flash drive, external disk, and so on. <li> It is also used in some embedded micros.</li> <li> The interface uses two wires but also includes 15 V DC and ground.</li> <li> Version 2.0 provides speeds to 480 Mbps over cables no longer than 16 ft.</li> <li> A new higher-speed version 3.0 is also available with speeds up to 5 Gbps.</li> <li> Data is sent in bytes in packets according to a unique protocol.</li>
+                    </ul>
+                </h2>
+            </div>
+            <img src="images/usb.jpg" alt="USB">
+        </div>
+    </div>
+    <footer>
+        <h1>ThankYou</h1>
+    </footer>
+</body>
+</html>
